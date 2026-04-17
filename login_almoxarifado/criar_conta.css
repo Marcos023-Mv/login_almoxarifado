@@ -1,0 +1,65 @@
+/* ════════════════════════════════════════════
+   criar_conta.css — estilos exclusivos
+   da tela de criação de conta
+   ════════════════════════════════════════════ */
+
+.card {
+  max-width: 440px;
+}
+
+/* ── Indicador de match de senha ── */
+.match-hint {
+  display: block;
+  font-size: 12px;
+  margin-top: 5px;
+  min-height: 16px;
+  transition: color 0.2s;
+}
+
+.match-hint.ok   { color: #4ab164; }
+.match-hint.erro { color: #f09595; }
+
+/* ── Barra de força da senha ── */
+.strength-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 7px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.strength-wrap.visible {
+  opacity: 1;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 99px;
+  transition: width 0.3s, background 0.3s;
+}
+
+.strength-fill.fraca { width: 25%;  background: #e24b4a; }
+.strength-fill.media { width: 55%;  background: #ef9f27; }
+.strength-fill.boa   { width: 80%;  background: #4ab164; }
+.strength-fill.forte { width: 100%; background: #1e7d3e; }
+
+.strength-label {
+  font-size: 11px;
+  min-width: 40px;
+  text-align: right;
+}
+
+.strength-label.fraca { color: #f09595; }
+.strength-label.media { color: #fac775; }
+.strength-label.boa   { color: #4ab164; }
+.strength-label.forte { color: #5dcaa5; }

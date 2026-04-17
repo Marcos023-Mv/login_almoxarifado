@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almoxarifado — Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <div class="logo-area">
+       <img src="img/LOGO AQUI.png" width="345" height="100"  alt="Logo da empresa">
+      <div>
+        <center><div class="enterprise-name">Nome da empresa</div></center>
+        <div class="app-title">Almoxarifado</div>
+        <div class="app-subtitle">Sistema de gestão de materiais</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <form id="loginForm">
+      <div class="field">
+        <label for="usuario">Usuário</label>
+        <input
+          type="text"
+          id="usuario"
+          placeholder="Digite seu usuário"
+          autocomplete="username"
+        >
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <div class="input-wrap">
+          <input
+            type="password"
+            id="senha"
+            placeholder="Digite sua senha"
+            autocomplete="current-password"
+          >
+          <button class="eye-btn" type="button" id="toggleSenha" title="Mostrar/ocultar senha">
+            <svg id="eyeIcon" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+        <a href="#" class="forgot" id="linkEsqueci">Esqueci minha senha</a>
+      </div>
+
+      <div class="msg" id="msg"></div>
+
+      <button class="btn-primary" type="submit">Entrar</button>
+    </form>
+
+    <button class="btn-secondary" onclick="window.location.href='criar_conta.html'">
+      Criar conta
+    </button>
+
+    <div class="footer">Sistema Almoxarifado &mdash; acesso restrito</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

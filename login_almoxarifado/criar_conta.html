@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almoxarifado — Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <div class="logo-area">
+       <img src="img/LOGO AQUI.png" width="345" height="100"  alt="Logo da empresa">
+      <div>
+        <center><div class="enterprise-name">Nome da empresa</div></center>
+        <div class="app-title">Almoxarifado</div>
+        <div class="app-subtitle">Sistema de gestão de materiais</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <form id="criarContaForm">
+
+      <div class="field">
+        <label for="nome">Nome completo</label>
+        <input
+          type="text"
+          id="nome"
+          placeholder="Digite seu nome completo"
+          autocomplete="name"
+        >
+      </div>
+
+      <div class="field">
+        <label for="usuario">Usuário</label>
+        <input
+          type="text"
+          id="usuario"
+          placeholder="Escolha um nome de usuário"
+          autocomplete="username"
+        >
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <div class="input-wrap">
+          <input
+            type="password"
+            id="senha"
+            placeholder="Crie uma senha"
+            autocomplete="new-password"
+          >
+          <button class="eye-btn" type="button" id="toggleSenha" title="Mostrar/ocultar senha">
+            <svg id="eyeIconSenha" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+        <div class="strength-wrap" id="strengthWrap">
+          <div class="strength-bar">
+            <div class="strength-fill" id="strengthFill"></div>
+          </div>
+          <span class="strength-label" id="strengthLabel"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="confirmarSenha">Confirmar senha</label>
+        <div class="input-wrap">
+          <input
+            type="password"
+            id="confirmarSenha"
+            placeholder="Repita a senha"
+            autocomplete="new-password"
+          >
+          <button class="eye-btn" type="button" id="toggleConfirmar" title="Mostrar/ocultar senha">
+            <svg id="eyeIconConfirmar" width="16" height="16" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+        <span class="match-hint" id="matchHint"></span>
+      </div>
+
+      <div class="msg" id="msg"></div>
+
+      <button class="btn-primary" type="submit">Cadastrar</button>
+    </form>
+
+    <button class="btn-secondary" onclick="window.location.href='login.html'">
+      &#8592; Voltar para o login
+    </button>
+
+    <div class="footer">Sistema Almoxarifado &mdash; acesso restrito</div>
+  </div>
+
+  <script src="criar_conta.js"></script>
+</body>
+</html>
